@@ -183,7 +183,8 @@ int main(){
 	size_t local[1] = {LOCAL_SIZE};
 	size_t global[1] = {GLOBAL_SIZE};
 
-	status = clEnqueueNDRangeKernel(cmd_queue, kernel, 1, NULL, global, local, 0, NULL, NULL);
+	//status = clEnqueueNDRangeKernel(cmd_queue, kernel, 1, NULL, global, local, 0, NULL, NULL);
+	status = clEnqueueNDRangeKernel(cmd_queue, kernel, 1, NULL, global, NULL, 0, NULL, NULL);
 	checkErr(status, "Execute kernel");
 
    // Run the sequential implementation for now. 
