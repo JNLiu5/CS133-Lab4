@@ -33,7 +33,7 @@ void conv(__global float* Cout,
     // ReLU
     for (int h = 0; h < IMROW; h++) {
         for (int w = 0; w < IMROW; w++) {
-            C[h][w] = fmax(0.0f, C[h][w]);
+            C[h][w] = fmax((float)0, C[h][w]);
         }
     }
 
